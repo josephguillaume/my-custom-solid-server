@@ -1,5 +1,8 @@
 {
-  "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld",
+  "@context": [
+"https://linkedsoftwaredependencies.org/bundles/npm/my-custom-solid-server/^1.0.0/components/context.jsonld",
+"https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld",
+],
   "@graph": [
     {
       "comment": [
@@ -7,7 +10,7 @@
         "webid claim is in openid scope until an official scope has been decided: https://github.com/solid/authentication-panel/issues/86"
         ],
       "@id": "urn:solid-server:default:IdentityProviderFactory",
-      "@type": "IdentityProviderFactory",
+      "@type": "IdentityProviderFactory3",
       "args_adapterFactory": { "@id": "urn:solid-server:default:IdpAdapterFactory" },
       "args_baseUrl": { "@id": "urn:solid-server:default:variable:baseUrl" },
       "args_idpPath": "/idp",

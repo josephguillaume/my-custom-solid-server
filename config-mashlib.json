@@ -1,7 +1,7 @@
 {
   "@context": [
     "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld",
-    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server-metadata-extender/^1.0.0/components/context.jsonld"
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server-metadata-extender/^1.0.0/components/context.jsonld",
   ],
   "import": [
     "files-scs:config/app/main/default.json",
@@ -13,7 +13,7 @@
     "files-scs:config/http/static/default.json",
     "files-scs:config/identity/access/public.json",
     "files-scs:config/identity/email/default.json",
-    "files-scs:config/identity/handler/default.json",
+    "file:///home/josephguillaume/projects/my-custom-solid-server/identity_handler.json",
     "files-scs:config/identity/ownership/token.json",
     "files-scs:config/identity/pod/static.json",
     "files-scs:config/identity/registration/enabled.json",
@@ -28,12 +28,10 @@
     "files-scs:config/storage/middleware/default.json",
     "files-scs:config/util/auxiliary/acl.json",
     "files-scs:config/util/identifiers/suffix.json",
-
     "files-scs:config/util/logging/winston.json",
     "files-scs:config/util/representation-conversion/default.json",
-    "file:///home/josephguillaume/projects/solid_server/memory.json",
+    "file:///home/josephguillaume/projects/my-custom-solid-server/memory.json",
     "files-scs:config/util/variables/default.json",
-    "file:///home/josephguillaume/projects/solid_server/identity.json",
   ],
   "@graph": [
     {
