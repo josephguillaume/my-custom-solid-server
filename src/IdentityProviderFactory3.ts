@@ -137,11 +137,9 @@ async function issueRefreshToken(ctx:KoaContextWithOIDC, client:any, code:any) {
   if (!client.grantTypeAllowed('refresh_token')) {
     return false;
   }
-console.log(ctx);
   return true;
 }
 config.issueRefreshToken=issueRefreshToken;
-console.log(config);
     return config;
   }
 

@@ -49,7 +49,11 @@
       "filePath": "./node_modules/mashlib/dist/databrowser.html",
       "options_container": true,
       "options_document": true,
-      "options_minQuality": 1
+      "options_minQuality": 1,
+      "options_disabledMediaRanges": [
+	              "image/*",
+		              "application/pdf"
+			            ]
     },
 
     {
@@ -68,6 +72,10 @@
         {
           "StaticAssetHandler:_assets_key": "/mashlib.min.js",
           "StaticAssetHandler:_assets_value": "./node_modules/mashlib/dist/mashlib.min.js"
+        },
+	{
+          "StaticAssetHandler:_assets_key": "/mashlib.min.js.map",
+          "StaticAssetHandler:_assets_value": "./node_modules/mashlib/dist/mashlib.min.js.map"
         }
       ]
     },
