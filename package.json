@@ -12,7 +12,7 @@
     "build:components": "componentsjs-generator -s src -c dist/components  --typeScopedContexts",
     "build:ts": "tsc",
     "prepare": "npm run build",
-    "start": "npx community-solid-server -c config-mashlib.json"
+    "start": "npx community-solid-server -c config-mashlib.json -f ~/solid-data -b https://pod.josephguillaume.id.au -m ."
   },
   "lsd:module": "https://linkedsoftwaredependencies.org/bundles/npm/my-custom-solid-server",
   "lsd:components": "dist/components/components.jsonld",
