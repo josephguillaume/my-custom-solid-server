@@ -255,10 +255,11 @@ config.issueRefreshToken=issueRefreshToken;
    * Pipes library errors to the provided ErrorHandler and ResponseWriter.
    */
   private configureErrors(config: Configuration): void {
-    config.renderError = async(ctx: KoaContextWithOIDC, out: ErrorOut, error: Error): Promise<void> => {
+    config.renderError = async(ctx: KoaContextWithOIDC, out: ErrorOut, error: any): Promise<void> => {
       // This allows us to stream directly to to the response object, see https://github.com/koajs/koa/issues/944
+      if(error.error_description) error.details = error.error_description;
       ctx.respond = false;
-      const result = await this.errorHandler.handleSafe({ error, preferences: { type: { 'text/plain': 1 }}});
+      const result = await this.errorHandler.handleSafe({ error, preferences: { type: { 'application/json': 1 }}});
       await this.responseWriter.handleSafe({ response: ctx.res, result });
     };
   }
