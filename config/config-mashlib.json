@@ -13,7 +13,7 @@
     "files-scs:config/http/static/default.json",
     "files-scs:config/identity/access/public.json",
     "files-scs:config/identity/email/default.json",
-    "file:///home/josephguillaume/projects/my-custom-solid-server/identity_handler.json",
+    "file:///home/josephguillaume/projects/my-custom-solid-server/config/identity_handler.json",
     "files-scs:config/identity/ownership/token.json",
     "files-scs:config/identity/pod/static.json",
     "files-scs:config/identity/registration/enabled.json",
@@ -30,7 +30,7 @@
     "files-scs:config/util/identifiers/suffix.json",
     "files-scs:config/util/logging/winston.json",
     "files-scs:config/util/representation-conversion/default.json",
-    "file:///home/josephguillaume/projects/my-custom-solid-server/memory.json",
+    "file:///home/josephguillaume/projects/my-custom-solid-server/config/memory.json",
     "files-scs:config/util/variables/default.json",
   ],
   "@graph": [

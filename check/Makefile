@@ -1,0 +1,2 @@
+default:
+	bash check.sh
