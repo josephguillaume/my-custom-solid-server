@@ -1,0 +1,20 @@
+--- ../node_modules/oidc-provider/lib/actions/grants/refresh_token.js	2021-12-11 23:11:39.450934522 +0000
++++ ../refresh_token.js	2021-11-27 23:51:34.867447668 +0000
+@@ -56,7 +56,7 @@
+   if (refreshToken.clientId !== ctx.oidc.client.clientId) {
+     throw new InvalidGrant('refresh token client mismatch');
+   }
+-
++/*
+   if (ctx.oidc.params.scope) {
+     const refreshTokenScopes = (refreshToken.scope || '').split(' ');
+     const requested = ctx.oidc.params.scope.split(' ');
+@@ -66,7 +66,7 @@
+       throw new InvalidScope(`refresh token missing requested ${formatters.pluralize('scope', missing.length)}`, missing.join(' '));
+     }
+   }
+-
++*/
+   const { dPoP } = ctx.oidc;
+ 
+   if (dPoP) {
