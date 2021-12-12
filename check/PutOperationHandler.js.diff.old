@@ -1,0 +1,64 @@
+1a2,12
+> /*
+> import { getLoggerFor } from '../../logging/LogUtil';
+> import type { ResourceStore } from '../../storage/ResourceStore';
+> import { BadRequestHttpError } from '../../util/errors/BadRequestHttpError';
+> import { NotImplementedHttpError } from '../../util/errors/NotImplementedHttpError';
+> import { CreatedResponseDescription } from '../output/response/CreatedResponseDescription';
+> import { ResetResponseDescription } from '../output/response/ResetResponseDescription';
+> import type { ResponseDescription } from '../output/response/ResponseDescription';
+> import type { OperationHandlerInput } from './OperationHandler';
+> import { OperationHandler } from './OperationHandler';
+> */
+3,9c14,20
+< exports.PutOperationHandler = void 0;
+< const LogUtil_1 = require("../../logging/LogUtil");
+< const BadRequestHttpError_1 = require("../../util/errors/BadRequestHttpError");
+< const NotImplementedHttpError_1 = require("../../util/errors/NotImplementedHttpError");
+< const CreatedResponseDescription_1 = require("../output/response/CreatedResponseDescription");
+< const ResetResponseDescription_1 = require("../output/response/ResetResponseDescription");
+< const OperationHandler_1 = require("./OperationHandler");
+---
+> exports.PutOperationHandler2 = void 0;
+> const community_server_1 = require("@solid/community-server");
+> const community_server_2 = require("@solid/community-server");
+> const community_server_3 = require("@solid/community-server");
+> const community_server_4 = require("@solid/community-server");
+> const ResetResponseDescription_1 = require("./ResetResponseDescription");
+> const community_server_5 = require("@solid/community-server");
+14c25
+< class PutOperationHandler extends OperationHandler_1.OperationHandler {
+---
+> class PutOperationHandler2 extends community_server_5.OperationHandler {
+17c28
+<         this.logger = LogUtil_1.getLoggerFor(this);
+---
+>         this.logger = (0, community_server_1.getLoggerFor)(this);
+22c33
+<             throw new NotImplementedHttpError_1.NotImplementedHttpError('This handler only supports PUT operations');
+---
+>             throw new community_server_3.NotImplementedHttpError('This handler only supports PUT operations');
+31c42
+<             throw new BadRequestHttpError_1.BadRequestHttpError('PUT requests require the Content-Type header to be set');
+---
+>             throw new community_server_2.BadRequestHttpError('PUT requests require the Content-Type header to be set');
+37,40c48,50
+< 
+< const body = await this.store.getRepresentation(operation.target, operation.preferences, operation.conditions);
+< 	    if (exists) {
+<             return new ResetResponseDescription_1.ResetResponseDescription(body.metadata,body.data);
+---
+>         const body = await this.store.getRepresentation(operation.target, operation.preferences, operation.conditions);
+>         if (exists) {
+>             return new ResetResponseDescription_1.ResetResponseDescription(body.metadata, body.data);
+42c52
+<         return new CreatedResponseDescription_1.CreatedResponseDescription(operation.target);
+---
+>         return new community_server_4.CreatedResponseDescription(operation.target);
+45,46c55,56
+< exports.PutOperationHandler = PutOperationHandler;
+< //# sourceMappingURL=PutOperationHandler.js.map
+---
+> exports.PutOperationHandler2 = PutOperationHandler2;
+> //# sourceMappingURL=PutOperationHandler2.js.map
+\ No newline at end of file

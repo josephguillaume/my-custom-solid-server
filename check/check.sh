@@ -16,6 +16,12 @@ check identity_handler.json.diff
 diff ../node_modules/@solid/community-server/config/util/resource-locker/memory.json ../config/memory.json >  memory.json.diff
 check memory.json.diff
 
+diff ../node_modules/@solid/community-server/dist/http/output/response/ResetResponseDescription.js ../dist/ResetResponseDescription.js > ResetResponseDescription.js.diff
+check ResetResponseDescription.js.diff
+
+diff ../node_modules/@solid/community-server/dist/http/ldp/PutOperationHandler.js ../dist/PutOperationHandler2.js > PutOperationHandler.js.diff
+check PutOperationHandler.js.diff
+
 # Patches to be applied
 
 if cmp -s ../node_modules/oidc-provider/lib/actions/grants/refresh_token.js refresh_token.js; then

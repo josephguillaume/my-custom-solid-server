@@ -1,0 +1,23 @@
+4c4
+< const ResponseDescription_1 = require("./ResponseDescription");
+---
+> const community_server_1 = require("@solid/community-server");
+8,11c8,15
+< class ResetResponseDescription extends ResponseDescription_1.ResponseDescription {
+< constructor(metadata, data) {
+< 	        super(205, metadata, data);
+< 	    }
+---
+> class ResetResponseDescription extends community_server_1.ResponseDescription {
+>     /**
+>        * @param metadata - Metadata concerning the response.
+>        * @param data - Potential data. @ignored
+>     */
+>     constructor(metadata, data) {
+>         super(205, metadata, data);
+>     }
+14c18
+< //# sourceMappingURL=ResetResponseDescription.js.map
+---
+> //# sourceMappingURL=ResetResponseDescription.js.map
+\ No newline at end of file

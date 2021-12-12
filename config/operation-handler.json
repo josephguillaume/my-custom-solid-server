@@ -1,0 +1,38 @@
+{
+  "@context": [
+"https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld",
+"https://linkedsoftwaredependencies.org/bundles/npm/my-custom-solid-server/^1.0.0/components/context.jsonld"
+],
+  "@graph": [
+    {
+      "@id": "urn:solid-server:default:OperationHandler",
+      "@type": "WaterfallHandler",
+      "handlers": [
+        {
+          "@type": "GetOperationHandler",
+          "store": { "@id": "urn:solid-server:default:ResourceStore" },
+        },
+        {
+          "@type": "PostOperationHandler",
+          "store": { "@id": "urn:solid-server:default:ResourceStore"  }
+        },
+        {
+          "@type": "PutOperationHandler2",
+          "store": { "@id": "urn:solid-server:default:ResourceStore" }
+        },
+        {
+          "@type": "DeleteOperationHandler",
+          "store": { "@id": "urn:solid-server:default:ResourceStore" }
+        },
+        {
+          "@type": "HeadOperationHandler",
+          "store": { "@id": "urn:solid-server:default:ResourceStore" },
+        },
+        {
+          "@type": "PatchOperationHandler",
+          "store": { "@id": "urn:solid-server:default:ResourceStore" }
+        }
+      ]
+    }
+  ]
+}
