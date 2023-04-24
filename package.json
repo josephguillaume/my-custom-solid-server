@@ -1,6 +1,6 @@
 {
   "name": "my-custom-solid-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "npm run build:ts && npm run build:components",
-    "build:components": "componentsjs-generator -s src -c dist/components  --typeScopedContexts",
+    "build:components": "componentsjs-generator -s src -c dist/components",
     "build:ts": "tsc",
     "prepare": "npm run build",
     "start": "npx community-solid-server -c config/config-mashlib.json -f ~/solid-data -b https://pod.josephguillaume.id.au -m ."
@@ -23,13 +23,13 @@
     "https://linkedsoftwaredependencies.org/bundles/npm/my-custom-solid-server/^1.0.0/dist/": "dist/"
   },
   "dependencies": {
-    "@solid/community-server": "^2.0.1",
-    "@solid/community-server-metadata-extender": "^1.0.0",
-    "mashlib": "^1.7.7"
+    "@solid/community-server": "CommunitySolidServer/CommunitySolidServer",
+    "mashlib": "^1.8.8",
+    "oidc-provider": "^7.10.6"
   },
   "devDependencies": {
     "@tsconfig/node16": "^1.0.2",
-    "componentsjs-generator": "^2.6.1",
-    "typescript": "^4.5.2"
+    "componentsjs-generator": "^3.0.3",
+    "typescript": "^4.7.4"
   }
 }

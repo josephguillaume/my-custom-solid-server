@@ -1,6 +1,6 @@
 {
   "@context": [
-"https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld",
+"https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^5.0.0/components/context.jsonld",
 "https://linkedsoftwaredependencies.org/bundles/npm/my-custom-solid-server/^1.0.0/components/context.jsonld"
 ],
   "@graph": [

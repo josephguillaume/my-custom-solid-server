@@ -13,9 +13,6 @@ check identity.json.diff
 diff ../node_modules/@solid/community-server/config/identity/handler/default.json ../config/identity_handler.json >  identity_handler.json.diff
 check identity_handler.json.diff
 
-diff ../node_modules/@solid/community-server/config/util/resource-locker/memory.json ../config/memory.json >  memory.json.diff
-check memory.json.diff
-
 diff ../node_modules/@solid/community-server/dist/http/output/response/ResetResponseDescription.js ../dist/ResetResponseDescription.js > ResetResponseDescription.js.diff
 check ResetResponseDescription.js.diff
 
